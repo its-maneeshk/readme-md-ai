@@ -22,11 +22,11 @@
   "type": "commonjs",
   "repository": {
     "type": "git",
-    "url": "https://github.com/itsmaneeshk/readme-md-ai.git"
+    "url": "https://github.com/its-maneeshk/readme-md-ai.git"
   },
-  "homepage": "https://github.com/itsmaneeshk/readme-md-ai#readme",
+  "homepage": "https://github.com/its-maneeshk/readme-md-ai#readme",
   "bugs": {
-    "url": "https://github.com/itsmaneeshk/readme-md-ai/issues"
+    "url": "https://github.com/its-maneeshk/readme-md-ai/issues"
   },
   "dependencies": {
     "axios": "^1.10.0",
