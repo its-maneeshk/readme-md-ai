@@ -46,29 +46,48 @@ readme-md-ai --dir .
 
 ---
 
-## 🎯 Example
+
+## 🔰 Using the CLI (Local Installation)
+
+If you installed `readme-md-ai` locally in your project using:
 
 ```bash
-readme-md-ai --dir ./my-project
+npm install readme-md-ai
 ```
 
-Generates a high-quality `README.md` in `./my-project` using intelligent analysis + prompts.
+You can run the CLI using either of the following methods:
+
+### ✅ Option 1: Run with `npx` (recommended)
+
+```bash
+npx readme-md-ai --dir .
+```
+
+This will:
+- Analyze the current directory (`.`)
+- Prompt you for project information
+- Generate a professional `README.md` file
 
 ---
 
-## 📂 Directory Structure
+### ✅ Option 2: Run directly from node_modules
 
+```bash
+node ./node_modules/readme-md-ai/bin/cli.js --dir .
 ```
-readme-md-ai/
-├── bin/
-│   └── cli.js          # CLI entry point
-├── src/
-│   ├── index.js        # CLI logic
-│   ├── analyzer/       # Project analyzer
-│   └── generator/      # README generator
-├── package.json
-├── README.md
+
+---
+
+### 💡 Pro Tip
+
+To avoid using `npx` every time, you can install the tool globally:
+
+```bash
+npm install -g readme-md-ai
+readme-md-ai --dir .
 ```
+
+Generates a high-quality `README.md` in `./my-project` using intelligent analysis + prompts.
 
 ---
 
