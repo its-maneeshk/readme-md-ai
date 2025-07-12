@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "CLI tool to auto-generate professional README.md files from your project metadata",
   "bin": {
-    "readme-md-ai": "./bin/cli.js"
+    "readme-md-ai": "bin/cli.js"
   },
   "main": "index.js",
   "scripts": {
