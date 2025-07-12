@@ -20,6 +20,14 @@
   "author": "Manish Kumar Patel",
   "license": "MIT",
   "type": "commonjs",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/itsmaneeshk/readme-md-ai.git"
+  },
+  "homepage": "https://github.com/itsmaneeshk/readme-md-ai#readme",
+  "bugs": {
+    "url": "https://github.com/itsmaneeshk/readme-md-ai/issues"
+  },
   "dependencies": {
     "axios": "^1.10.0",
     "chalk": "^4.1.2",
