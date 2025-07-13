@@ -78,42 +78,11 @@ readme-md-ai --dir ./my-project
 
 ---
 
-## 🧪 Local Development / Testing
+## 📥 Contributing
 
-Clone the repo:
+We welcome contributions!  
+Please see [`CONTRIBUTING.md`](CONTRIBUTING.md) and our [`CODE_OF_CONDUCT.md`](CODE_OF_CONDUCT.md) for details.
 
-```bash
-git clone https://github.com/its-maneeshk/readme-md-ai.git
-cd readme-md-ai
-npm install
-```
-
-Link the package locally (for testing with other projects):
-
-```bash
-npm link
-# Then in your test project folder:
-readme-md-ai --dir .
-```
-
----
-
-## 📤 Publishing / Versioning Guide
-
-1. Bump version in `package.json`
-2. Commit changes
-3. Tag release:
-
-```bash
-git tag v1.x.x
-git push origin v1.x.x
-```
-
-4. Publish to npm:
-
-```bash
-npm publish --access public
-```
 
 ---
 
