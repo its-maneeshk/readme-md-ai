@@ -20,6 +20,13 @@
     "nodejs"
   ],
   "author": "Manish Kumar Patel",
+  "contributors": [
+    {
+      "name": "Vikas Thakur",
+      "email": "thakurmrvikas@gmail.com",
+      "url": "https://github.com/thakurmrvikas9"
+    }
+  ],
   "license": "MIT",
   "type": "module",
   "repository": {
