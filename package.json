@@ -15,7 +15,9 @@
     "node",
     "markdown",
     "generator",
-    "automation"
+    "automation",
+    "openai",
+    "nodejs"
   ],
   "author": "Manish Kumar Patel",
   "license": "MIT",
