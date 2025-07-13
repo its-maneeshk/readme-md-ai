@@ -1,6 +1,6 @@
 # 📘 readme-md-ai
 
-> ⚡ A fast and easy CLI tool to auto-generate professional `README.md` files using OpenAI, directly from your project metadata.
+> ⚡ **A blazing fast, zero-config CLI tool to generate high-quality `README.md` files using OpenAI — right from your project's metadata.**
 
 ![npm version](https://img.shields.io/npm/v/readme-md-ai)
 ![npm downloads](https://img.shields.io/npm/dt/readme-md-ai)
@@ -9,119 +9,77 @@
 
 ---
 
-## 🚀 Features
+## 🚀 Why use `readme-md-ai`?
 
-- ✨ Generate beautiful, informative `README.md` files instantly
-- 🤖 Powered by OpenAI for high-quality content
-- 🧠 Auto-analyzes your project folder and metadata
-- 💻 Interactive prompts for customization
-- 📝 Supports CommonJS and modern JavaScript projects
-- 🛠️ Easily extensible
+- ✨ Instantly create clean, professional `README.md` files
+- 🤖 Powered by **OpenAI** for intelligent content generation
+- 📦 Auto-analyzes your project's `package.json` & metadata
+- 💬 Interactive CLI prompts (powered by `inquirer`)
+- 🎨 Offers **multiple README templates**: Minimal, Professional, and AI-style
+- 🛠️ No boilerplate, no fuss — just install and run
 
 ---
 
 ## 📦 Installation
 
-Install globally using npm:
+Install globally via npm:
 
 ```bash
 npm install -g readme-md-ai
 ```
-Create readme file for project:
+
+> Or install locally:
 
 ```bash
-readme-md-ai --dir .
+npm install readme-md-ai --save-dev
 ```
-This will scan the current directory (which must contain a package.json) and generate a README.md.
+
+---
 
 ## ⚙️ Usage
 
+To generate a `README.md` for the current project:
+
 ```bash
 readme-md-ai --dir .
 ```
 
-### 🧾 Options
+It will:
+- Analyze your project metadata from `package.json`
+- Ask you to choose a template
+- Generate a ready-to-use `README.md` file in your project
+
+---
+
+## 🧰 CLI Options
 
 | Option       | Description                         | Default |
 |--------------|-------------------------------------|---------|
-| `--dir`      | Project directory to scan           | `.`     |
-| `--force`    | Overwrite existing README.md        | `false` |
-| `--debug`    | Enable debug logs                   | `false` |
+| `--dir` or `-d` | Directory to scan                 | `.`     |
 
----
-
-
-## 🔰 Using the CLI (Local Installation)
-
-If you installed `readme-md-ai` locally in your project using:
+> Example:
 
 ```bash
-npm install readme-md-ai
+readme-md-ai --dir ./my-project
 ```
-
-You can run the CLI using either of the following methods:
-
-### ✅ Option 1: Run with `npx` (recommended)
-
-```bash
-npx readme-md-ai --dir .
-```
-
-This will:
-- Analyze the current directory (`.`)
-- Prompt you for project information
-- Generate a professional `README.md` file
-
----
-
-### ✅ Option 2: Run directly from node_modules
-
-```bash
-node ./node_modules/readme-md-ai/bin/cli.js --dir .
-```
-
----
-
-### 💡 Pro Tip
-
-To avoid using `npx` every time, you can install the tool globally:
-
-```bash
-npm install -g readme-md-ai
-readme-md-ai --dir .
-```
-
-Generates a high-quality `README.md` in `./my-project` using intelligent analysis + prompts.
 
 ---
 
 ## 🧠 How It Works
 
-1. Analyzes your codebase (`package.json`, main files)
-2. Asks you smart questions via CLI (using `inquirer`)
-3. Uses OpenAI to generate meaningful sections:
-   - Project description
-   - Installation instructions
-   - Usage examples
-   - License info
-4. Outputs a clean, professional `README.md`
+1. Scans the given directory for `package.json`
+2. Extracts project name, description, scripts, and license
+3. Prompts you to select one of the available README templates:
+   - Minimal
+   - Professional
+   - Modern AI-style
+4. Generates a clean, well-structured `README.md` using OpenAI and your metadata
 
 ---
 
-## 🛠️ Dependencies
+## 🧪 Local Development / Testing
 
-- axios
-- chalk
-- commander
-- dotenv
-- inquirer
-- openai
-
----
-
-## 📥 Contributing
-
-Contributions, issues, and feature requests are welcome!
+Clone the repo:
 
 ```bash
 git clone https://github.com/its-maneeshk/readme-md-ai.git
@@ -129,34 +87,68 @@ cd readme-md-ai
 npm install
 ```
 
-Create a feature branch and submit a PR 🚀
+Link the package locally (for testing with other projects):
+
+```bash
+npm link
+# Then in your test project folder:
+readme-md-ai --dir .
+```
+
+---
+
+## 📤 Publishing / Versioning Guide
+
+1. Bump version in `package.json`
+2. Commit changes
+3. Tag release:
+
+```bash
+git tag v1.x.x
+git push origin v1.x.x
+```
+
+4. Publish to npm:
+
+```bash
+npm publish --access public
+```
+
+---
+
+## 🛠️ Built With
+
+- `commander`
+- `inquirer`
+- `chalk`
+- `axios`
+- `dotenv`
+- `openai`
 
 ---
 
 ## 🐛 Reporting Issues
 
-Found a bug or need help? Open an issue:  
-👉 https://github.com/its-maneeshk/readme-md-ai/issues
+Have a bug or idea? Open an issue:  
+👉 [GitHub Issues](https://github.com/its-maneeshk/readme-md-ai/issues)
 
 ---
 
-## 📃 License
+## 👤 Author
 
-This project is licensed under the **MIT License**.  
-See `LICENSE` for details.
-
----
-
-## 💬 Author
-
-Created with ❤️ by **Manish Kumar Patel**  
-GitHub: https://github.com/its-maneeshk  
-NPM: https://www.npmjs.com/package/readme-md-ai
+**Manish Kumar Patel**  
+GitHub: [@its-maneeshk](https://github.com/its-maneeshk)  
+npm: [readme-md-ai](https://www.npmjs.com/package/readme-md-ai)
 
 ---
 
-## 🌟 Star This Project
+## ⭐️ Star on GitHub
 
-If you find this useful, please consider giving it a ⭐️ on GitHub!
+If you found this helpful, consider starring the repo:  
+👉 https://github.com/its-maneeshk/readme-md-ai
 
-https://github.com/its-maneeshk/readme-md-ai
+---
+
+## 📄 License
+
+Licensed under the [MIT License](LICENSE).
