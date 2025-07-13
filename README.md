@@ -6,6 +6,7 @@
 ![npm downloads](https://img.shields.io/npm/dt/readme-md-ai)
 ![license](https://img.shields.io/npm/l/readme-md-ai)
 ![issues](https://img.shields.io/github/issues/its-maneeshk/readme-md-ai)
+![Contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg)
 
 ---
 
