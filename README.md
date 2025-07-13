@@ -27,8 +27,12 @@ Install globally using npm:
 ```bash
 npm install -g readme-md-ai
 ```
+Create readme file for project:
 
----
+```bash
+readme-md-ai --dir .
+```
+This will scan the current directory (which must contain a package.json) and generate a README.md.
 
 ## ⚙️ Usage
 
