@@ -24,6 +24,10 @@ export default async function generateReadme(dir) {
       },
     ]);
 
+    if (template === 'Modern AI-Style') {
+      console.log(chalk.yellow('⚠️ Note: The "Modern AI-Style" template is under active development and may change in future versions.'));
+    }
+    
     const content = generateReadmeContent(metadata, template);
     const outputPath = path.join(dir, 'README.md');
     fs.writeFileSync(outputPath, content, 'utf8');
