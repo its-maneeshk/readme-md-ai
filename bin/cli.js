@@ -15,6 +15,16 @@ program
   .version('1.0.0')
   .option('-d, --dir <path>', 'Target project directory', '.');
 
+program.on('--help', () => {
+  console.log('');
+  console.log('Examples:');
+  console.log('  $ readme-md-ai --dir .');
+  console.log('  $ npx readme-md-ai --dir ./my-project');
+  console.log('');
+  console.log('📘 Full Docs & Setup Guide:');
+  console.log('👉 https://github.com/its-maneeshk/readme-md-ai');
+});
+
 program.parse();
 const options = program.opts();
 
