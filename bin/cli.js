@@ -1,8 +1,13 @@
 #!/usr/bin/env node
 
-const { program } = require('commander');
-const path = require('path');
-const generateReadme = require('../src/index');
+import { program } from 'commander';
+import path from 'path';
+import { fileURLToPath } from 'url';
+import generateReadme from '../src/index.js';
+
+// __dirname workaround for ESM
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 program
   .name('readme-md-ai')

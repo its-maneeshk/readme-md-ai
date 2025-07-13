@@ -1,7 +1,10 @@
-const fs = require('fs');
-const path = require('path');
+import fs from 'fs';
+import path from 'path';
 
-function analyzeProject(dir) {
+/**
+ * Analyze package.json for project metadata
+ */
+export function analyzeProject(dir) {
   const pkgPath = path.join(dir, 'package.json');
 
   if (!fs.existsSync(pkgPath)) {
@@ -17,5 +20,3 @@ function analyzeProject(dir) {
     license: pkg.license || 'MIT',
   };
 }
-
-module.exports = { analyzeProject };
