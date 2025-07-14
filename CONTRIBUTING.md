@@ -104,33 +104,6 @@ This project uses Prettier and ESLint.
 npm run lint    # To lint the code
 npm run format  # To auto-fix formatting issues
 ```
-
----
-
-## 🚀 Publishing and Releases
-
-Only the maintainer publishes to npm. If you're a maintainer:
-
-1. Bump the version in `package.json`
-2. Commit the change:
-
-```bash
-git commit -am "chore: bump version to x.x.x"
-```
-
-3. Create a Git tag:
-
-```bash
-git tag vX.X.X
-git push origin vX.X.X
-```
-
-4. Publish to npm:
-
-```bash
-npm publish
-```
-
 ---
 
 ## 🙌 Need Help?
