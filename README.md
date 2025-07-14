@@ -54,9 +54,9 @@ It will:
 
 ## 🧰 CLI Options
 
-| Option       | Description                         | Default |
-|--------------|-------------------------------------|---------|
-| `--dir` or `-d` | Directory to scan                 | `.`     |
+| Option          | Description                         | Default |
+|------------------|-------------------------------------|---------|
+| `--dir` or `-d`  | Directory to scan                   | `.`     |
 
 > Example:
 
@@ -76,13 +76,14 @@ readme-md-ai --dir ./my-project
    - Modern AI-style
 4. Generates a clean, well-structured `README.md` using OpenAI and your metadata
 
+> 🔧 Note: The "Modern AI-style" template is still under active development and may evolve.
+
 ---
 
 ## 📥 Contributing
 
 We welcome contributions!  
 Please see [`CONTRIBUTING.md`](CONTRIBUTING.md) and our [`CODE_OF_CONDUCT.md`](CODE_OF_CONDUCT.md) for details.
-
 
 ---
 
