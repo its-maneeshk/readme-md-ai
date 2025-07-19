@@ -104,6 +104,7 @@ This project uses Prettier and ESLint.
 npm run lint    # To lint the code
 npm run format  # To auto-fix formatting issues
 ```
+
 ---
 
 ## 🙌 Need Help?

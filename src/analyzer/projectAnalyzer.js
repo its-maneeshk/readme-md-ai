@@ -1,30 +1,41 @@
-// src/analyzer/projectAnalyzer.js
 import fs from 'fs';
 import path from 'path';
 
+/**
+ * Analyzes the project to extract metadata from package.json.
+ */
 export function analyzeProject(dir) {
-  const pkgPath = path.join(dir, 'package.json');
+  const packageJsonPath = path.join(dir, 'package.json');
 
-  if (!fs.existsSync(pkgPath)) {
-    throw new Error('❌ package.json not found in the target directory.');
+  if (!fs.existsSync(packageJsonPath)) {
+    throw new Error('package.json not found in target directory.');
   }
 
-  const pkg = JSON.parse(fs.readFileSync(pkgPath, 'utf8'));
+  const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf-8'));
 
-  const commonDirs = ['src', 'routes', 'controllers', 'utils', 'pages'];
-  const presentDirs = commonDirs.filter(folder =>
-    fs.existsSync(path.join(dir, folder))
-  );
+  const {
+    name = '',
+    version = '',
+    description = '',
+    author = '',
+    license = 'MIT',
+    scripts = {},
+    dependencies = {},
+    devDependencies = {},
+    keywords = [],
+    repository = {},
+  } = packageJson;
 
   return {
-    name: pkg.name || 'Unnamed Project',
-    description: pkg.description || 'Short project description.',
-    scripts: pkg.scripts || {},
-    license: pkg.license || 'MIT',
-    author: pkg.author || 'Unknown Author',
-    repository: pkg.repository?.url || '',
-    dependencies: Object.keys(pkg.dependencies || {}),
-    devDependencies: Object.keys(pkg.devDependencies || {}),
-    folders: presentDirs,
+    name,
+    version,
+    description,
+    author,
+    license,
+    scripts,
+    dependencies,
+    devDependencies,
+    keywords,
+    repository,
   };
 }
