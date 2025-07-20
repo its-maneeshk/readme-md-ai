@@ -1,7 +1,7 @@
 import fetch from 'node-fetch';
 
-export async function askOpenAI(metadata, apiKey, model = 'gpt-4') {
-  const response = await fetch('https://api.openai.com/v1/chat/completions', {
+export async function askOpenAI(metadata, apiKey, model = 'mistralai/mixtral-8x7b') {
+  const response = await fetch('https://openrouter.ai/api/v1/chat/completions', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -24,7 +24,7 @@ export async function askOpenAI(metadata, apiKey, model = 'gpt-4') {
 
   if (!response.ok) {
     const errorData = await response.json().catch(() => ({}));
-    throw new Error(`OpenAI API Error: ${errorData.error?.message || response.statusText}`);
+    throw new Error(`OpenRouter API Error: ${errorData.error?.message || response.statusText}`);
   }
 
   const json = await response.json();

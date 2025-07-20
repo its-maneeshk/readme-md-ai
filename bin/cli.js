@@ -10,11 +10,15 @@ const __dirname = path.dirname(__filename);
 
 program
   .name('readme-md-ai')
-  .description('🧠 Generate a professional README.md file from your project metadata')
+  .description('🧠 Generate a professional README.md file using OpenAI or OpenRouter models')
   .version('2.0.0')
   .option('-d, --dir <path>', 'Target project directory', '.')
-  .option('-m, --model <model>', 'OpenAI model to use (e.g., gpt-4, gpt-4o)', 'gpt-3.5-turbo')
-  .option('-k, --apiKey <key>', 'OpenAI API key (required for AI template)')
+  .option(
+    '-m, --model <model>',
+    'AI model to use (e.g., gpt-4, gpt-3.5-turbo, mistralai/mixtral-8x7b, meta-llama/llama-3-70b-instruct)',
+    'mistralai/mixtral-8x7b'
+  )
+  .option('-k, --apiKey <key>', 'API key (OpenAI or OpenRouter)')
   .option('-t, --template <type>', 'Template type (Minimal | Professional | Modern AI-Style)');
 
 program.parse();
@@ -26,5 +30,5 @@ run({
   dir: targetDir,
   templateType: options.template || null,
   apiKey: options.apiKey || null,
-  model: options.model || 'gpt-3.5-turbo',
+  model: options.model || 'mistralai/mixtral-8x7b-instruct',
 });
