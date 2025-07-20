@@ -22,7 +22,6 @@ Feel free to explore and enhance the codebase. Most source code is located in:
 
 - `src/`: Core logic
 - `bin/cli.js`: CLI entry point
-- `examples/`: Custom usage demos
 
 To add a new feature or fix a bug:
 
