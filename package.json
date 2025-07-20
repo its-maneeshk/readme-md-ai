@@ -10,14 +10,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "readme",
-    "cli",
-    "node",
-    "markdown",
-    "generator",
-    "automation",
-    "openai",
-    "nodejs"
+    "readme","readme generator","cli","node","markdown","generator","automation","openai","nodejs",
+    "cli readme", "openai readme", "ai README", "npm readme", "github readme"
   ],
   "author": "Manish Kumar Patel",
   "contributors": [
