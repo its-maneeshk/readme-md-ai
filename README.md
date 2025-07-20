@@ -1,6 +1,7 @@
+
 # 📘 readme-md-ai
 
-> ⚡ A blazing fast, zero-config CLI tool to generate high-quality `README.md` files using OpenAI — right from your project metadata.
+> ⚡ A blazing fast, zero-config CLI tool to generate high-quality `README.md` files using OpenAI or OpenRouter — right from your project metadata.
 
 ![npm version](https://img.shields.io/npm/v/readme-md-ai)
 ![npm downloads](https://img.shields.io/npm/dt/readme-md-ai)
@@ -13,7 +14,7 @@
 ## 🚀 Why use `readme-md-ai`?
 
 - ✨ Instantly create clean, professional `README.md` files
-- 🤖 **Powered by OpenAI GPT models** (supports GPT-3.5, GPT-4 fallback)
+- 🤖 **Powered by OpenAI or OpenRouter models** (supports GPT-3.5, GPT-4, Mixtral, LLaMA-3, and more)
 - 📦 Auto-analyzes your `package.json` metadata
 - 💬 Interactive CLI prompts (powered by `inquirer`)
 - 🎨 Offers **multiple README templates**:
@@ -53,9 +54,9 @@ The CLI will:
 1. Scan your project’s `package.json`
 2. Ask you to pick a template
 3. For **AI-style templates**, it will:
-   - Prompt for your OpenAI API key
-   - Use GPT to generate a project introduction and combine it with metadata
-   - Fallback to GPT-3.5 if GPT-4 fails (and notify you)
+   - Prompt for your API key (OpenAI or OpenRouter)
+   - Use your selected model (default: `mistralai/mixtral-8x7b-instruct`)
+   - Fallback to `gpt-3.5-turbo` if the selected model fails (with warning)
 
 ---
 
@@ -63,41 +64,67 @@ The CLI will:
 
 If you choose the **Modern AI-style** template:
 
-- You'll be prompted to enter your [OpenAI API key](https://platform.openai.com/account/api-keys)
-- The tool uses `gpt-4` by default
-- If quota or access fails, it automatically falls back to `gpt-3.5-turbo` and notifies you
+- You'll be prompted to enter your OpenAI or OpenRouter API key
+- The tool attempts to use the model specified with `--model`
+- If that model is unavailable or fails, it automatically falls back to `gpt-3.5-turbo`
 - The generated `README.md` will include a personalized project intro, version info, author, license, and more
 
 > 💡 **Your API key is never saved or shared**. It is used only once to generate your README content during the session.
 
 ---
 
+## 🧠 Supported Models (Free + Paid)
+
+| Provider    | Model Name                        | Model ID                                 | Free |
+|-------------|----------------------------------|-------------------------------------------|------|
+| OpenAI      | GPT-3.5 Turbo                    | `gpt-3.5-turbo`                           | ❌   |
+| OpenAI      | GPT-4                            | `gpt-4`                                   | ❌   |
+| OpenRouter  | Mixtral 8x7B Instruct            | `mistralai/mixtral-8x7b-instruct`         | ✅   |
+| OpenRouter  | Hermes 2 Mixtral 8x7B DPO        | `nousresearch/nous-hermes-2-mixtral-8x7b-dpo` | ❌ |
+| OpenRouter  | Noromaid Mixtral 8x7B Instruct   | `neversleep/noromaid-mixtral-8x7b-instruct` | ✅  |
+| OpenRouter  | LLaMA-3 70B Instruct             | `meta-llama/llama-3-70b-instruct`         | ✅   |
+
+Use the `--model` flag to select your preferred model.
+
+---
+
 ## 📥 Where to Get an API Key
 
-1. Sign in or create a free OpenAI account: https://platform.openai.com/
+### OpenAI
+
+1. Sign in or create an account: https://platform.openai.com/
 2. Go to [API Keys](https://platform.openai.com/account/api-keys)
 3. Click **+ Create new secret key**
 4. Copy and paste the key into the CLI when prompted
+
+### OpenRouter
+
+1. Visit [OpenRouter.ai](https://openrouter.ai)
+2. Sign in and go to [API Keys](https://openrouter.ai/keys)
+3. Copy your universal API key
 
 ---
 
 ## 🧰 CLI Options
 
-| Option         | Description                      | Default |
-|----------------|----------------------------------|---------|
-| `--dir` or `-d` | Directory to scan for package.json | `.`     |
+| Option         | Description                                      | Default                             |
+|----------------|--------------------------------------------------|-------------------------------------|
+| `--dir, -d`    | Directory to scan for package.json               | `.`                                 |
+| `--model, -m`  | Model ID to use (e.g., `mistralai/...`)          | `mistralai/mixtral-8x7b-instruct`   |
+| `--apiKey, -k` | Your API key (OpenAI or OpenRouter)              | `null` (prompted if not provided)   |
+| `--template, -t` | Template type (Minimal, Professional, AI-style) | `Prompted`                          |
 
 Example:
 
 ```bash
-readme-md-ai --dir ./my-project
+readme-md-ai --dir ./my-project --model mistralai/mixtral-8x7b-instruct
 ```
 
 ---
 
 ## 🔄 Fallback Handling
 
-If GPT-4 access fails (e.g., quota exceeded or unavailable model), the tool will:
+If the selected model fails (e.g., invalid ID, quota exceeded):
 
 - Automatically fallback to `gpt-3.5-turbo`
 - Inform you with a clear warning message
@@ -106,10 +133,13 @@ If GPT-4 access fails (e.g., quota exceeded or unavailable model), the tool will
 If **both fail**, a descriptive error will guide you to check your API key or plan.
 
 ---
+
 ## 📥 Contributing
 
 We welcome contributions!  
 Please see [`CONTRIBUTING.md`](CONTRIBUTING.md) and our [`CODE_OF_CONDUCT.md`](CODE_OF_CONDUCT.md) for details.
+
+---
 
 ## 🛠️ Built With
 
