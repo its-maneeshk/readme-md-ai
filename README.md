@@ -137,10 +137,12 @@ If **both fail**, a descriptive error will guide you to check your API key or pl
 
 ---
 
-## 📥 Contributing
+## 🛠 Contributing
 
 We welcome contributions!  
 Please see [`CONTRIBUTING.md`](CONTRIBUTING.md) and our [`CODE_OF_CONDUCT.md`](CODE_OF_CONDUCT.md) for details.
+
+See how to add yourself to the contributor list here: [🧠 Contributor Guide (Wiki)](../../wiki/How-to-Add-Yourself-as-a-Contributor)
 
 ---
 
