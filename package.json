@@ -1,6 +1,6 @@
 {
   "name": "readme-md-ai",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "CLI tool to auto-generate professional README.md files from your project metadata",
   "bin": {
     "readme-md-ai": "bin/cli.js"
@@ -14,13 +14,6 @@
     "cli readme", "openai readme", "ai README", "npm readme", "github readme"
   ],
   "author": "Manish Kumar Patel",
-  "contributors": [
-    {
-      "name": "Vikas Thakur",
-      "email": "thakurmrvikas@gmail.com",
-      "url": "https://github.com/thakurmrvikas9"
-    }
-  ],
   "license": "MIT",
   "type": "module",
   "repository": {
