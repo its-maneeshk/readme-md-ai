@@ -9,17 +9,17 @@
   "imageSize": 100,
   "commit": true,
   "commitConvention": "angular",
+  "contributorsPerLine": 7,
+  "linkToUsage": true,
   "contributors": [
     {
-      "login": "Maneesh-dev",
-      "name": "Maneesh Thatipamula",
-      "avatar_url": "https://avatars.githubusercontent.com/u/185033869?v=4",
-      "profile": "https://github.com/Maneesh-dev",
+      "login": "its-maneeshk",
+      "name": "Manish Patel",
+      "avatar_url": "https://avatars.githubusercontent.com/u/122369058?v=4",
+      "profile": "https://www.manishpatel.com.np/",
       "contributions": [
         "code"
       ]
     }
-  ],
-  "contributorsPerLine": 7,
-  "linkToUsage": true
+  ]
 }
