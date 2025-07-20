@@ -5,7 +5,7 @@ import ora from 'ora';
 import inquirer from 'inquirer';
 import { analyzeProject } from './analyzer/projectAnalyzer.js';
 import { generateReadmeContent } from './generator/readmeGenerator.js';
-import { validateApiKey } from './utils/validateApiKey.js'; // ✅ import your utility
+import { validateApiKey } from './utils/validateApiKey.js';
 
 export default async function run({ dir, templateType, apiKey, model }) {
     try {
