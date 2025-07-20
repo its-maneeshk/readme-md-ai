@@ -154,8 +154,12 @@ Please see [`CONTRIBUTING.md`](CONTRIBUTING.md) and our [`CODE_OF_CONDUCT.md`](C
 
 ## 🐛 Reporting Issues
 
-Found a bug or have an idea? Open an issue here:  
-👉 [GitHub Issues](https://github.com/its-maneeshk/readme-md-ai/issues)
+We value your feedback!  
+If you encounter any issues, have feature suggestions, or just want to ask a question — feel free to open a GitHub issue:
+
+👉 [Open an Issue](https://github.com/its-maneeshk/readme-md-ai/issues)
+
+> 💡 Your input helps improve this project for everyone. Don't hesitate!
 
 ---
 
