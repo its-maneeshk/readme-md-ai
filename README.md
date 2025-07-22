@@ -2,9 +2,9 @@
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 [![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
-# 📘 readme-md-ai
+# readme-md-ai
 
-> ⚡ A blazing fast, zero-config CLI tool to generate high-quality `README.md` files using OpenAI or OpenRouter — right from your project metadata.
+> A blazing fast, zero-config CLI tool to generate high-quality `README.md` files using OpenAI or OpenRouter — right from your project metadata.
 
 ![npm version](https://img.shields.io/npm/v/readme-md-ai)
 ![npm downloads](https://img.shields.io/npm/dt/readme-md-ai)
@@ -14,17 +14,17 @@
 
 ---
 
-## 🚀 Why use `readme-md-ai`?
+## Why use `readme-md-ai`?
 
-- ✨ Instantly create clean, professional `README.md` files
-- 🤖 **Powered by OpenAI or OpenRouter models** (supports GPT-3.5, GPT-4, Mixtral, LLaMA-3, and more)
-- 📦 Auto-analyzes your `package.json` metadata
-- 💬 Interactive CLI prompts (powered by `inquirer`)
-- 🎨 Offers **multiple README templates**:
+- Instantly create clean, professional `README.md` files
+- **Powered by OpenAI or OpenRouter models** (supports GPT-3.5, GPT-4, Mixtral, LLaMA-3, and more)
+- Auto-analyzes your `package.json` metadata
+- Interactive CLI prompts (powered by `inquirer`)
+- Offers **multiple README templates**:
   - Minimal
   - Professional
   - AI-enhanced (Modern AI-style)
-- 🛠️ No boilerplate, no setup — just install and run
+- No boilerplate, no setup — just install and run
 
 ---
 
@@ -63,7 +63,7 @@ The CLI will:
 
 ---
 
-## 🧠 How AI Templates Work
+## How AI Templates Work??
 
 If you choose the **Modern AI-style** template:
 
@@ -76,7 +76,7 @@ If you choose the **Modern AI-style** template:
 
 ---
 
-## 🧠 Supported Models (Free + Paid)
+## Supported Models (Free + Paid)
 
 | Provider    | Model Name                        | Model ID                                 | Free |
 |-------------|----------------------------------|-------------------------------------------|------|
@@ -91,7 +91,7 @@ Use the `--model` flag to select your preferred model.
 
 ---
 
-## 📥 Where to Get an API Key
+## Where to Get an API Key??
 
 ### OpenAI
 
@@ -108,7 +108,7 @@ Use the `--model` flag to select your preferred model.
 
 ---
 
-## 🧰 CLI Options
+## CLI Options
 
 | Option         | Description                                      | Default                             |
 |----------------|--------------------------------------------------|-------------------------------------|
@@ -125,7 +125,7 @@ readme-md-ai --dir ./my-project --model mistralai/mixtral-8x7b-instruct
 
 ---
 
-## 🔄 Fallback Handling
+## Fallback Handling
 
 If the selected model fails (e.g., invalid ID, quota exceeded):
 
@@ -137,7 +137,7 @@ If **both fail**, a descriptive error will guide you to check your API key or pl
 
 ---
 
-## 🛠 Contributing
+## Contributing
 
 We welcome contributions!  
 Please see [`CONTRIBUTING.md`](CONTRIBUTING.md) and our [`CODE_OF_CONDUCT.md`](CODE_OF_CONDUCT.md) for details.
@@ -146,7 +146,7 @@ See how to add yourself to the contributor list here: [🧠 Contributor Guide (W
 
 ---
 
-## 🛠️ Built With
+## Built With
 
 - `commander`
 - `inquirer`
@@ -157,7 +157,7 @@ See how to add yourself to the contributor list here: [🧠 Contributor Guide (W
 
 ---
 
-## 🐛 Reporting Issues
+## Reporting Issues
 
 We value your feedback!  
 If you encounter any issues, have feature suggestions, or just want to ask a question — feel free to open a GitHub issue:
@@ -168,7 +168,7 @@ If you encounter any issues, have feature suggestions, or just want to ask a que
 
 ---
 
-## 👤 Author
+## Author
 
 **Manish Kumar Patel**  
 GitHub: [@its-maneeshk](https://github.com/its-maneeshk)  
@@ -176,18 +176,18 @@ npm: [readme-md-ai](https://www.npmjs.com/package/readme-md-ai)
 
 ---
 
-## ⭐️ Show Some Love
+## Show Some Love
 
-If you found this useful, please consider starring the repo 💫  
-👉 [Star on GitHub](https://github.com/its-maneeshk/readme-md-ai)
+If you found this useful, please consider starring the repo   
+-> [Star on GitHub](https://github.com/its-maneeshk/readme-md-ai)
 
 ---
 
-## 📄 License
+## License
 
 Licensed under the [MIT License](LICENSE).
 
-## Contributors ✨
+## Contributors 
 
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
 
