@@ -1,6 +1,6 @@
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 # readme-md-ai
 
@@ -197,8 +197,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <table>
   <tbody>
     <tr>
-      <td align="center" valign="top" width="14.28%"><a href="https://www.manishpatel.com.np/"><img src="https://avatars.githubusercontent.com/u/122369058?v=4?s=100" width="100px;" alt="Manish Patel"/><br /><sub><b>Manish Patel</b></sub></a><br /><a href="https://github.com/Manish Patel/readme-md-ai/commits?author=its-maneeshk" title="Code">💻</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="https://github.com/thakurmrvikas9"><img src="https://avatars.githubusercontent.com/u/179313839?v=4?s=100" width="100px;" alt="Vikash Thakur"/><br /><sub><b>Vikash Thakur</b></sub></a><br /><a href="https://github.com/Manish Patel/readme-md-ai/commits?author=thakurmrvikas9" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://www.manishpatel.com.np/"><img src="https://avatars.githubusercontent.com/u/122369058?v=4?s=100" width="100px;" alt="Manish Patel"/><br /><sub><b>Manish Patel</b></sub></a><br /><a href="https://github.com/Manish Patel/readme-md-ai/commits?author=its-maneeshk" title="Code">💻</a> <a href="https://github.com/Manish Patel/readme-md-ai/commits?author=its-maneeshk" title="Documentation">📖</a> <a href="#ideas-its-maneeshk" title="Ideas, Planning, & Feedback">🤔</a> <a href="#maintenance-its-maneeshk" title="Maintenance">🚧</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/thakurmrvikas9"><img src="https://avatars.githubusercontent.com/u/179313839?v=4?s=100" width="100px;" alt="Vikash Thakur"/><br /><sub><b>Vikash Thakur</b></sub></a><br /><a href="https://github.com/Manish Patel/readme-md-ai/issues?q=author%3Athakurmrvikas9" title="Bug reports">🐛</a> <a href="#translation-thakurmrvikas9" title="Translation">🌍</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/SaiSruthisri"><img src="https://avatars.githubusercontent.com/u/148372065?v=4?s=100" width="100px;" alt="Sai Sruthisri "/><br /><sub><b>Sai Sruthisri </b></sub></a><br /><a href="https://github.com/Manish Patel/readme-md-ai/commits?author=SaiSruthisri" title="Code">💻</a></td>
     </tr>
   </tbody>
   <tfoot>

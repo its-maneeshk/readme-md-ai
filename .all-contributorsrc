@@ -18,7 +18,10 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/122369058?v=4",
       "profile": "https://www.manishpatel.com.np/",
       "contributions": [
-        "code","doc","ideas","maintenance"
+        "code",
+        "doc",
+        "ideas",
+        "maintenance"
       ]
     },
     {
@@ -27,7 +30,17 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/179313839?v=4",
       "profile": "https://github.com/thakurmrvikas9",
       "contributions": [
-        "bug","translation"
+        "bug",
+        "translation"
+      ]
+    },
+    {
+      "login": "SaiSruthisri",
+      "name": "Sai Sruthisri ",
+      "avatar_url": "https://avatars.githubusercontent.com/u/148372065?v=4",
+      "profile": "https://github.com/SaiSruthisri",
+      "contributions": [
+        "code"
       ]
     }
   ]
