@@ -2,34 +2,50 @@ import { askOpenAI } from '../../services/openaiService.js';
 import chalk from 'chalk';
 
 /**
- * Generates an AI-powered README intro and combines with structured sections.
+ * Generates a complete AI-powered README using smart fallback and rich prompting.
+ * Automatically includes sections like Features, Usage, Installation, etc.
  * Falls back to gpt-3.5-turbo if the preferred model fails.
  */
 export async function generateAIReadme(metadata, apiKey, model = 'gpt-4') {
   const {
-    name,
-    description,
-    version,
-    author,
-    license,
+    name = 'My Project',
+    description = 'A cool open-source project.',
+    version = '1.0.0',
+    author = 'Anonymous',
+    license = 'MIT',
     dependencies = {},
   } = metadata;
 
-  const aiIntroPrompt = `
-You are a helpful AI developer assistant.
-Generate a professional, enthusiastic project introduction paragraph for the following project:
+  const smartReadmePrompt = `
+You are a senior open-source developer assistant.
+Generate a complete, professional, markdown-ready README.md file for the following project.
+
+Use the provided metadata. If some information is missing, use smart assumptions or defaults.
+
+# Project Metadata
 - Name: ${name}
 - Description: ${description}
 - Version: ${version}
 - Author: ${author}
-- Tech stack: ${Object.keys(dependencies).join(', ')}
+- License: ${license}
+- Dependencies: ${Object.keys(dependencies).join(', ') || 'None'}
 
-Keep it concise, friendly, and markdown-ready.
+# Guidelines
+- Start with a catchy title and emoji.
+- Write an enthusiastic intro paragraph explaining what the project does and why it's useful.
+- Add shields.io badges (version, license).
+- Add a **Features** section based on description or stack.
+- Add **Installation** and **Usage** sections.
+- If it may have a visual or CLI interface, add a **Screenshots** or **Demo** section.
+- Add **API Reference** only if it seems relevant.
+- Add **Contributing**, **License**, and **Acknowledgements** sections.
+- Ensure markdown is clean and well-formatted.
 `;
 
-  let aiIntro;
+  let fullReadme;
+
   try {
-    aiIntro = await askOpenAI(aiIntroPrompt, apiKey, model);
+    fullReadme = await askOpenAI(smartReadmePrompt, apiKey, model);
   } catch (error) {
     console.error(chalk.red(`⚠️ ${model} failed:`), error.message);
 
@@ -37,7 +53,7 @@ Keep it concise, friendly, and markdown-ready.
     if (model !== fallbackModel) {
       console.log(chalk.yellow(`👉 Falling back to "${fallbackModel}"...`));
       try {
-        aiIntro = await askOpenAI(aiIntroPrompt, apiKey, fallbackModel);
+        fullReadme = await askOpenAI(smartReadmePrompt, apiKey, fallbackModel);
       } catch (fallbackError) {
         console.error(chalk.red(`❌ Fallback model (${fallbackModel}) also failed:`), fallbackError.message);
         throw fallbackError;
@@ -47,20 +63,5 @@ Keep it concise, friendly, and markdown-ready.
     }
   }
 
-  return `# ${name || 'Project Title'}
-
-${aiIntro}
-
-## 📦 Version
-
-\`${version || '1.0.0'}\`
-
-## 👤 Author
-
-${author || 'Anonymous'}
-
-## 🧾 License
-
-Licensed under the ${license || 'MIT'} License.
-`;
+  return fullReadme;
 }

@@ -11,7 +11,7 @@ const __dirname = path.dirname(__filename);
 program
   .name('readme-md-ai')
   .description('🧠 Generate a professional README.md file using OpenAI or OpenRouter models')
-  .version('2.1.3')
+  .version('3.0.0')
   .option('-d, --dir <path>', 'Target project directory', '.')
   .option(
     '-m, --model <model>',
