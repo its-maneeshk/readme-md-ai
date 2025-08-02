@@ -4,7 +4,7 @@
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 # readme-md-ai
 
-> A blazing fast, zero-config CLI tool to generate high-quality `README.md` files using OpenAI or OpenRouter — right from your project metadata.
+> Instantly generate stunning, professional-grade README.md files from your project metadata — powered by OpenAI, OpenRouter, and zero setup.
 
 ![npm version](https://img.shields.io/npm/v/readme-md-ai)
 ![npm downloads](https://img.shields.io/npm/dt/readme-md-ai)
