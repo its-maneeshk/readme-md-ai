@@ -7,14 +7,7 @@ import { analyzeProject } from './analyzer/projectAnalyzer.js';
 import { generateReadmeContent } from './generator/readmeGenerator.js';
 import { validateApiKey } from './utils/validateApiKey.js';
 
-let apiKey = process.env.OPENAI_API_KEY;
-if(!apiKey) {
-    console.error(chalk.red("❌ Missing API key. Please set OPENAI_API_KEY in your environment."));
-    process.exit(1);
-}
-console.log(chalk.green("✅ API key detected! Ready to make OpenAI requests."));
-
-export default async function run({ dir, templateType, model }) {
+export default async function run({ dir, templateType, apiKey, model }) {
     try {
         if (!fs.existsSync(dir)) {
             console.error(chalk.red(`❌ Directory does not exist: ${dir}`));
@@ -23,19 +16,11 @@ export default async function run({ dir, templateType, model }) {
 
         console.log(chalk.blue(`📁 Target Directory: ${dir}`));
 
-        let metadata;
-        try {
-            const spinner = ora('Analyzing project...').start();
-            metadata = analyzeProject(dir);
-            spinner.succeed('✅ Project analysis complete');
-        }
-        catch (err) {
-            console.error(chalk.red('❌ Failed to analyze project.'), err.message);
-            return;
-        }
+        const spinner = ora('Analyzing project...').start();
+        const metadata = analyzeProject(dir);
+        spinner.succeed('✅ Project analysis complete');
 
         let template = templateType;
-        try {
         if (!template) {
             const { selectedTemplate } = await inquirer.prompt([
                 {
@@ -46,12 +31,9 @@ export default async function run({ dir, templateType, model }) {
                 },
             ]);
             template = selectedTemplate;
-        }} 
-        catch(err) {
-            console.error(chalk.red('❌ Failed to get template input.'),err.message);
         }
-        try{ 
-          if (template === 'Modern AI-Style') {
+
+        if (template === 'Modern AI-Style') {
             while (!validateApiKey(apiKey)) {
                 const { inputKey } = await inquirer.prompt([
                     {
@@ -68,11 +50,6 @@ export default async function run({ dir, templateType, model }) {
                 }
             }
         }
-    } 
-    catch(err) {
-        console.error(chalk.red('❌ Error while validating API key.'), err.message);
-        return;
-    }   
 
         const outputPath = path.join(dir, 'README.md');
         if (fs.existsSync(outputPath)) {
@@ -89,31 +66,19 @@ export default async function run({ dir, templateType, model }) {
                 return;
             }
         }
-        try{ 
-            const content = await generateReadmeContent(metadata, template, dir, model, apiKey);
-            fs.writeFileSync(outputPath, content, 'utf8');
 
-            console.log(chalk.green('✅ README.md generated successfully!'));
-            if (template === 'Modern AI-Style' && model === 'gpt-4') {
-                console.log(chalk.gray('ℹ️ If GPT-4 was unavailable, GPT-3.5-Turbo was used as a fallback.'));
-            }
-            console.log(chalk.cyan(`📄 Location: ${outputPath}`));
-            console.log(chalk.gray(`📚 Template: ${template}`));
+        const content = await generateReadmeContent(metadata, template, dir, model, apiKey);
+        fs.writeFileSync(outputPath, content, 'utf8');
+
+        console.log(chalk.green('✅ README.md generated successfully!'));
+        if (template === 'Modern AI-Style' && model === 'gpt-4') {
+            console.log(chalk.gray('ℹ️ If GPT-4 was unavailable, GPT-3.5-Turbo was used as a fallback.'));
         }
-        catch(err){
-            console.error(chalk.red('❌ Failed to generate or write README.md.'), err.message);
-            return;
-        }
+        console.log(chalk.cyan(`📄 Location: ${outputPath}`));
+        console.log(chalk.gray(`📚 Template: ${template}`));
     } catch (err) {
         console.error(chalk.red('❌ Error:'), err.stack || err.message);
         console.error(chalk.red(`❌ Both GPT-4 and GPT-3.5-Turbo failed.`));
         console.error(chalk.red(`💡 Please check your OpenAI billing or choose a different template (like Minimal or Professional).`));
     }
 }
-run({
-  dir: process.cwd(),          // uses current folder
-  templateType: null,          // lets it prompt you to select a template
-  model: 'gpt-4'
-});
-
-
