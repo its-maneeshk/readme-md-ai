@@ -28,7 +28,26 @@
 
 ---
 
-## 📦 Installation
+## 📦 Begineer Friendly Installation & Run
+
+1. Open your project folder in terminal:
+
+```bash
+cd path/to/your/project
+```
+
+### ⚙️ Usage For Begineer
+To generate a `README.md` for your project. Run the following command to generate your README:
+
+```bash
+npx readme-md-ai --dir .
+```
+- npx automatically runs the tool even if it’s installed locally.
+- The CLI will guide you step by step to pick a template and (if needed) enter your API key.
+
+---
+
+## 📦 Installation for other user
 
 Install globally via npm:
 
@@ -42,16 +61,14 @@ Or install locally:
 npm install readme-md-ai --save-dev
 ```
 
----
+### ⚙️ Usage
 
-## ⚙️ Usage
-
-To generate a `README.md` for your project:
+To generate a `README.md` for your project. Run the following command to generate your README:
 
 ```bash
 readme-md-ai --dir .
 ```
-
+---
 The CLI will:
 
 1. Scan your project’s `package.json`
